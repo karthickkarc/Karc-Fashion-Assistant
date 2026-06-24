@@ -1,0 +1,11 @@
+# Optional "bonus" embedding backend: joint image+text embeddings via
+# CLIP or FashionCLIP instead of the default TF-IDF backend.
+#
+#   pip install -r requirements-clip.txt
+#   echo "EMBEDDING_BACKEND=fashionclip" >> .env
+#   python scripts/build_index.py
+#
+# Requires internet access on first run to download model weights from
+# Hugging Face Hub (not needed for the default TF-IDF backend).
+torch>=2.2
+transformers>=4.40

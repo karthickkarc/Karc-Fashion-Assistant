@@ -1,0 +1,29 @@
+# Core pipeline (data, embeddings, vector search, compatibility model)
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+faiss-cpu>=1.8
+joblib>=1.3
+Pillow>=10.0
+openpyxl>=3.1
+
+# Working prototype UI
+streamlit>=1.35
+
+# Optional REST API
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.6
+
+# Conversational LLM providers -- only the one set in LLM_PROVIDER needs to
+# actually be installed; the system runs fine with none of these installed
+# (LLM_PROVIDER=none, the default, uses the rule-based NLU + template
+# explanations instead).
+# google-generativeai>=0.5   # LLM_PROVIDER=gemini
+# openai>=1.30               # LLM_PROVIDER=openai
+# anthropic>=0.25            # LLM_PROVIDER=anthropic
+
+python-dotenv>=1.0
+
+# Dev / testing
+pytest>=8.0
